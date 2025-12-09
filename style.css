@@ -46,14 +46,25 @@ aside.dashboard-sidebar button#resize {
   transform: translateX(50%);
   right: 0;
   top: 1rem;
-  background-color: #505050;
-  color: white;
+  background-color: #607966;
+  height: 40px;
   aspect-ratio: 1;
   border-radius: 50%;
   border: 5px solid black;
-  padding: 5px;
+  padding: 3px;
   text-transform: uppercase;
   color: wheat;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 200ms ease-in, border-color 200ms ease-in;
+}
+
+aside.dashboard-sidebar button#resize:hover {
+  background-color: #2c6939;
+  border-color: wheat;
 }
 
 main.dashboard-main {
@@ -67,9 +78,14 @@ main.dashboard-main {
 
 footer.dashboard-footer {
   grid-area: footer;
-  background-image: linear-gradient(to bottom, white, darkgray);
+  background-image: linear-gradient(to bottom, #e0e5e3, darkgray);
   padding-block: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer.dashboard-footer > p {
+  display: flex;
+  gap: 10px;
 }

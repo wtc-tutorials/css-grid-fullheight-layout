@@ -78,18 +78,18 @@ main.dashboard-main {
 
 main.dashboard-main .card {
   min-height: 7rem;
-  background-color: #fff;
+  background-color: #fffefe;
   border-radius: 0.5rem;
   padding: 1rem;
 }
 
 .card-1 {
-  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+  background-image: linear-gradient(62deg, #80a0a0 0%, #207b71 100%);
 }
 
 footer.dashboard-footer {
   grid-area: footer;
-  background-image: linear-gradient(to bottom, #e0e5e3, darkgray);
+  background-image: linear-gradient(to bottom, #e0e5e3, #a9a9a9);
   padding-block: 2rem;
   display: flex;
   justify-content: center;
@@ -124,6 +124,7 @@ footer.dashboard-footer > p {
   .card-4 {
     grid-area: 3/1/4/2;
   }
+  
   .card-5 {
     grid-area: 3/2/4/3;
   }
@@ -137,6 +138,7 @@ footer.dashboard-footer > p {
   .card-9 {
     grid-column: span 2;
   }
+
   .card-10,
   .card-11,
   .card-12,

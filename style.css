@@ -17,7 +17,7 @@ body {
   grid-template-areas:
     'header header'
     'sidebar main'
-    'footer footer';
+    'sidebar footer';
   transition: grid-template-columns 0.3s ease-in;
 }
 
@@ -68,12 +68,23 @@ aside.dashboard-sidebar button#resize:hover {
 }
 
 main.dashboard-main {
-  grid-row: main;
+  grid-area: main;
   background-image: linear-gradient(45deg, #efefee, #a0a0a0);
-  display: flex;
-  flex-direction: column;
+  display: grid;
+
   gap: 1rem;
-  padding: 1rem 2rem;
+  padding: 1.25rem;
+}
+
+main.dashboard-main .card {
+  min-height: 7rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.card-1 {
+  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
 }
 
 footer.dashboard-footer {
@@ -88,4 +99,48 @@ footer.dashboard-footer {
 footer.dashboard-footer > p {
   display: flex;
   gap: 10px;
+}
+
+@media (width>=760px) {
+  main.dashboard-main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card {
+    grid-column: span 2;
+  }
+
+  .card-1 {
+    grid-column: span 4;
+  }
+}
+
+@media (width>=992px) {
+  .card-2,
+  .card-3 {
+    grid-area: auto;
+  }
+
+  .card-4 {
+    grid-area: 3/1/4/2;
+  }
+  .card-5 {
+    grid-area: 3/2/4/3;
+  }
+
+  .card-6,
+  .card-7 {
+    grid-area: span 2 / auto;
+  }
+
+  .card-8,
+  .card-9 {
+    grid-column: span 2;
+  }
+  .card-10,
+  .card-11,
+  .card-12,
+  .card-13 {
+    grid-column: auto;
+  }
 }

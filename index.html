@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
     <title>css-grid-fullheight-layout</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1 class="">Welcome to css-grid-fullheight-layout</h1>
-    
-    
-</body>
+    <link
+      rel="stylesheet"
+      href="style.css" />
+  </head>
+  <body>
+    <header class="dashboard-header">
+      <h1 class="">Welcome to CSS Grid Full Height Layout</h1>
+    </header>
+    <aside class="dashboard-sidebar">
+      <button
+        id="resize"
+        class="btn">
+        &#9776;
+      </button>
+    </aside>
+    <main class="dashboard-main">
+      <p
+        >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit possimus, consequuntur vero assumenda hic
+        accusantium animi cupiditate veniam iure. Veniam quo deserunt reiciendis totam dolore expedita id nisi rerum
+        nemo.</p
+      >
+      <p
+        >Qui totam corporis, eius voluptatum excepturi neque earum ex ipsa corrupti! Error quidem iusto incidunt
+        aspernatur! Sequi optio voluptate deserunt vel vero cum doloribus praesentium quae facilis molestiae, pariatur
+        dolore!</p
+      >
+      <p
+        >Voluptatibus, dolor. Sit veritatis quos corporis! Pariatur, fuga? Omnis culpa minus architecto ipsum, magni
+        soluta doloribus vero maiores eligendi aut alias ut eos? Facilis aspernatur itaque veniam eum, qui beatae!</p
+      >
+      <p
+        >Consequuntur porro ea inventore veritatis maxime corporis, ipsa voluptates voluptatem repudiandae asperiores
+        nesciunt ad facilis pariatur ipsam autem animi itaque quod possimus. Similique iste obcaecati harum impedit
+        facere, consectetur eos?</p
+      >
+      <p
+        >Cum ratione, maxime quis tempora aut animi voluptatem quaerat dicta? Hic, eos quas eligendi illum ex
+        necessitatibus molestiae obcaecati officia consequuntur! Iusto, animi? Sunt quae magnam exercitationem pariatur
+        porro doloremque.</p
+      >
+    </main>
+    <footer class="dashboard-footer"> Copyright </footer>
+    <script>
+      const resizeBtn = document.getElementById('resize')
+      resizeBtn.addEventListener('click', (e) => {
+        e.preventDefault()
+        document.body.classList.toggle('sidebar-expand')
+      })
+    </script>
+  </body>
 </html>

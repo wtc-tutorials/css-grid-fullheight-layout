@@ -47,9 +47,20 @@
         porro doloremque.</p
       >
     </main>
-    <footer class="dashboard-footer"> Copyright </footer>
+    <footer class="dashboard-footer">
+      <p><span class="">Copyright</span><span class="footer-year"></span><span class=""></span></p>
+    </footer>
     <script>
+      // contants
       const resizeBtn = document.getElementById('resize')
+      const footerYearSpan = document.querySelector('.footer-year')
+      const currentYear = new Date().getFullYear()
+
+      // event listeners
+      document.addEventListener('DOMContentLoaded', () => {
+        footerYearSpan.textContent = currentYear
+      })
+      
       resizeBtn.addEventListener('click', (e) => {
         e.preventDefault()
         document.body.classList.toggle('sidebar-expand')
